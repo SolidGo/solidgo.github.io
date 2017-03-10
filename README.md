@@ -1,1 +1,1 @@
-# My project's README
+# SolidGo README
