@@ -246,9 +246,15 @@
 		        $('#mce-'+resp.result+'-response').show();
 		        $('#mce-'+resp.result+'-response').html(resp.msg);
                  $('#mce-'+resp.result+'-response').html('<div class="modal"><div class="modal-dialog" role="document"><div><figure class="hero"> <img src="img/watermelon.png" alt="Watermelon Solid Go"> </figure><div class="figure-text"><h4>Thank you!</h4><p>Well keep in touch</p></div></div></div></div>');
+
 		        $('#mc-embedded-subscribe-form').each(function(){
 		            this.reset();
 		    	});
+                 setTimeout(
+                              function()
+                              {
+                                 $('#mce-'+resp.result+'-response').hide();
+                              }, 2500);
 
 		    // If the form has errors, display them, inline if possible, or appended to #mce-error-response
 		    } else {
@@ -289,6 +295,14 @@
 		                $('#mce-'+resp.result+'-response').show();
 		                $('#mce-'+resp.result+'-response').html(msg);
                         $('#mce-'+resp.result+'-response').html('<div class="modal"><div class="modal-dialog" role="document"><div><figure class="hero"> <img src="img/watermelon.png" alt="Watermelon Solid Go"> </figure><div class="figure-text"><h4>Thank you!</h4><p>Well keep in touch</p></div></div></div></div>');
+                        $('#mc-embedded-subscribe-form').each(function(){
+		            this.reset();
+		    	});
+                        setTimeout(
+                              function()
+                              {
+                                 $('#mce-'+resp.result+'-response').hide();
+                              }, 2500);
 
 		            } else {
 		                var fieldName = $("input[name*='"+fnames[index]+"']").attr('name'); // Make sure this exists (they haven't deleted the fnames array lookup)
@@ -300,6 +314,14 @@
 		            $('#mce-'+resp.result+'-response').show();
 		            $('#mce-'+resp.result+'-response').html(msg);
 		           $('#mce-'+resp.result+'-response').html('<div class="modal"><div class="modal-dialog" role="document"><div><figure class="hero"> <img src="img/watermelon.png" alt="Watermelon Solid Go"> </figure><div class="figure-text"><h4>Thank you!</h4><p>Well keep in touch</p></div></div></div></div>');
+                    $('#mc-embedded-subscribe-form').each(function(){
+		            this.reset();
+		    	});
+                        setTimeout(
+                              function()
+                              {
+                                 $('#mce-'+resp.result+'-response').hide();
+                              }, 2500);
 		        }
 		    }
 		}
