@@ -735,6 +735,7 @@ footer .redes li i {
 .figure-text {
   position: absolute;
   width: 100%;
+  z-index: 3;
   top: 60%;
   left: 0;
   text-align: center;
