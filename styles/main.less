@@ -701,11 +701,21 @@ footer {
 		padding-left: 6%;
 	}
 }
-@media screen and (max-width: 450px) {
+@media(max-width: 450px) {
 	#formContainer .formWrapper #mc_embed_signup {
 		padding-right: 6%;
 	}
+	.figure-text{
+		h4{
+			font-size: 35px!important;
+			margin-bottom: 10px!important;
+		}
+		p{
+			font-size: 18px!important;
+		}
+	}
 }
+/*corrección grid bootstrap*/
 .container-fluid > .container{
 	@media (min-width: 768px){
 		width: 738px;
@@ -718,4 +728,73 @@ footer {
 		width: 1170px;
 	}
 
+}
+/*modal*/
+.modal{
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999999;
+    display: block;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background-color: rgba(255,255,255,.9);
+}
+.modal-dialog {
+	margin:0 auto;
+    transform: translateY(-50%);
+	top:40%;
+	&>div{
+		max-width: 90%;
+		margin: 0 auto;
+		&>.hero{
+			border-radius: 50%;
+			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0), #ffffff);
+			box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.05);
+			text-align: center;
+
+			&:after{
+				bottom:7px;
+			}
+			&:before{
+				content: "";
+					width: 94%;
+					height: 94%;
+					border-radius: 50%;
+					position:absolute;
+					top:3%;
+					left:3%;
+					background: white;
+					box-shadow: -4px -7px 20px 0 rgba(0, 0, 0, 0.4);
+
+
+			}
+			img{
+				max-width: 96%;
+				margin: 0 auto;
+				position:relative;
+				border-radius: 50%;
+				top:-7px;
+
+			}
+		}
+
+	}
+}
+.figure-text{
+	position:absolute;
+	width:100%;
+	top:60%;
+	left:0;
+	text-align: center;
+	h4{
+		font-size: 45px;
+		margin-bottom: 15px;
+	}
+	p{
+		font-size: 22px;
+	}
 }
