@@ -13,6 +13,7 @@
 }
 * {
   -webkit-font-smoothing: antialised;
+  box-sizing: border-box;
 }
 html,
 body,
@@ -189,7 +190,7 @@ section {
 .hero:after {
   content: "";
   width: 440px;
-  max-width: 100%;
+  max-width: 97%;
   height: 50%;
   background-color: #ffe800;
   border-radius: 0 0 440px 440px;
@@ -221,6 +222,7 @@ section {
   bottom: 0px;
   right: 0px;
   background-color: #f3dd00;
+  max-height: 405px;
 }
 #formContainer .formWrapper #mc_embed_signup {
   z-index: 9999999;
@@ -301,6 +303,7 @@ section {
   line-height: 0.98;
   letter-spacing: normal;
   color: #282828;
+  transition: all .3s;
 }
 .text-simple {
   font-size: 54px;
@@ -324,6 +327,7 @@ section {
   position: absolute;
   bottom: -90px;
   left: 0;
+  transition: all .3s;
 }
 footer {
   min-height: 200px;
@@ -351,7 +355,8 @@ footer .navWrapper {
 footer .navWrapper p {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  line-height: 50px;
+  line-height: 30px;
+  padding: 11px 0;
   color: #ffe800;
 }
 footer .navWrapper nav ul li {
@@ -384,8 +389,10 @@ footer .redes {
 footer .redes li {
   display: inline-block;
   line-height: 150px;
-  margin-left: 30px;
   font-size: 0;
+}
+footer .redes li:not(:first-child) {
+  margin-left: 30px;
 }
 footer .redes li i {
   font-size: 25px;
@@ -396,6 +403,7 @@ footer .redes li i {
   line-height: 49px;
   background-color: rgba(164, 164, 164, 0.14);
   border-radius: 100px;
+  vertical-align: middle;
 }
 .pageContainer {
   padding-top: 58px;
@@ -547,7 +555,12 @@ footer .redes li i {
   padding-left: 15px;
   margin-top: 45px;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1199px) {
+  .text-simple {
+    font-size: 49px;
+  }
+}
+@media screen and (max-width: 991px) {
   #formContainer .formWrapper .column {
     position: absolute;
     top: 0;
@@ -559,8 +572,14 @@ footer .redes li i {
   #formContainer h3 {
     padding-bottom: 30px;
   }
+  #formContainer .formWrapper {
+    padding-bottom: 0;
+  }
   .column {
-    max-height: 362px;
+    height: auto!important;
+  }
+  #mc_embed_signup {
+    padding-bottom: 50px;
   }
   .hero {
     margin: 0 auto;
@@ -575,6 +594,27 @@ footer .redes li i {
     bottom: -45px;
   }
 }
+@media screen and (max-width: 767px) {
+  footer .redes {
+    float: none;
+    text-align: center;
+  }
+  #formContainer {
+    padding-top: 107px;
+    padding-bottom: 225px;
+  }
+  #formContainer h3 {
+    font-size: 72px;
+  }
+  footer p {
+    text-align: center;
+    line-height: normal;
+    padding: 50px 0 0;
+  }
+  .navWrapper [class^="col"] {
+    text-align: center!important;
+  }
+}
 @media screen and (max-width: 600px) {
   .text-simple {
     font-size: 30px;
@@ -582,8 +622,55 @@ footer .redes li i {
   }
   .text-simple span:after {
     bottom: -45px;
+    width: 105.5px;
+    height: 17px;
+  }
+  #formContainer {
+    padding-top: 90px;
   }
   #formContainer h3 {
     font-size: 40px;
+  }
+  #mc_embed_signup_scroll .pull-right,
+  #mc_embed_signup_scroll .pull-left {
+    display: none;
+  }
+  #mc_embed_signup_scroll h3 {
+    padding-bottom: 0;
+  }
+  .clear {
+    text-align: left!important;
+  }
+  footer .redes li:not(:first-child) {
+    margin-left: 7%;
+  }
+  section {
+    padding-bottom: 95px;
+  }
+  .textWrapper {
+    padding-left: 7%!important;
+  }
+  #formContainer .formWrapper #mc_embed_signup {
+    padding-left: 6%;
+  }
+}
+@media screen and (max-width: 450px) {
+  #formContainer .formWrapper #mc_embed_signup {
+    padding-right: 6%;
+  }
+}
+@media (min-width: 768px) {
+  .container-fluid > .container {
+    width: 738px;
+  }
+}
+@media (min-width: 992px) {
+  .container-fluid > .container {
+    width: 962px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid > .container {
+    width: 1170px;
   }
 }

@@ -17,6 +17,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 * {
     -webkit-font-smoothing: antialised;
+	box-sizing: border-box;
 }
 
 html,
@@ -207,7 +208,7 @@ section {
     &:after {
         content: "";
         width: 440px;
-        max-width: 100%;
+        max-width: 97%;
         height: 50%;
         background-color: #ffe800;
         border-radius: 0 0 440px 440px;
@@ -239,6 +240,7 @@ section {
             bottom: 0px;
             right: 0px;
             background-color: #f3dd00;
+			max-height: 405px;
             //width: 100%;
         }
         #mc_embed_signup {
@@ -321,6 +323,7 @@ section {
         line-height: 0.98;
         letter-spacing: normal;
         color: #282828;
+		transition: all .3s;
     }
 }
 
@@ -344,6 +347,7 @@ section {
             position: absolute;
             bottom: -90px;
             left: 0;
+			transition: all .3s;
         }
     }
 }
@@ -372,7 +376,8 @@ footer {
         p {
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
-            line-height: 50px;
+            line-height: 30px;
+			padding:11px 0;
             color: #ffe800;
         }
         nav {
@@ -411,8 +416,10 @@ footer {
         li {
             display: inline-block;
             line-height: 150px;
-            margin-left: 30px;
-            font-size: 0;
+			font-size: 0;
+			&:not(:first-child){
+				 margin-left: 30px;
+			}
             i {
                 font-size: 25px;
                 color: #a4a4a4;
@@ -422,6 +429,7 @@ footer {
                 line-height: 49px;
                 background-color: rgba(164, 164, 164, .14);
                 border-radius: 100px;
+				vertical-align: middle;
             }
         }
     }
@@ -590,9 +598,13 @@ footer {
     }
 }
 
+@media screen and (max-width: 1199px) {
+	.text-simple {
+		font-size: 49px;
+	}
+}
 
-
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
     #formContainer .formWrapper .column {
         position: absolute;
         top: 0;
@@ -604,9 +616,14 @@ footer {
     #formContainer h3 {
         padding-bottom: 30px;
     }
+	#formContainer .formWrapper{
+		padding-bottom: 0;}
     .column {
-        max-height: 362px;
-    }
+        height:auto!important;
+	}
+	#mc_embed_signup{
+		padding-bottom: 50px;
+	}
     .hero {
         margin: 0 auto;
         margin-bottom: 34px;
@@ -622,6 +639,27 @@ footer {
         }
     }
 }
+@media screen and (max-width: 767px) {
+	 footer .redes{
+		float:none;
+		text-align: center;
+	}
+	#formContainer{
+		padding-top: 107px;
+		padding-bottom: 225px;
+     }
+	#formContainer h3{
+		font-size: 72px;
+	}
+	footer p{
+		text-align: center;
+		line-height: normal;
+		padding:50px 0 0;
+	}
+	.navWrapper [class^="col"]{
+		text-align: center!important;
+	}
+}
 @media screen and (max-width: 600px) {
     .text-simple {
         font-size: 30px;
@@ -629,11 +667,55 @@ footer {
         span {
             &:after {
                 bottom: -45px;
+				width: 105.5px;
+				height: 17px;
             }
         }
     }
+	#formContainer{
+		padding-top: 90px;
+	}
     #formContainer h3 {
-
-        font-size: 40px;
+		font-size: 40px;
     }
+	#mc_embed_signup_scroll {
+		.pull-right, .pull-left{
+			display: none;}
+		h3{
+			padding-bottom: 0;
+		}
+	}
+	.clear{
+		text-align: left!important;
+	}
+	footer .redes li:not(:first-child) {
+    margin-left: 7%;
+	}
+	section{
+		padding-bottom: 95px;
+	}
+	.textWrapper{
+		padding-left:7%!important;
+	}
+	#formContainer .formWrapper #mc_embed_signup {
+		padding-left: 6%;
+	}
+}
+@media screen and (max-width: 450px) {
+	#formContainer .formWrapper #mc_embed_signup {
+		padding-right: 6%;
+	}
+}
+.container-fluid > .container{
+	@media (min-width: 768px){
+		width: 738px;
+	}
+	@media (min-width: 992px){
+		width: 962px;
+	}
+	@media (min-width: 1200px)
+	{
+		width: 1170px;
+	}
+
 }
