@@ -460,7 +460,6 @@ footer .redes li i {
   height: 182px;
   width: 182px;
   background-color: #ffe800;
-  opacity: .7;
   position: absolute;
   left: 0;
   top: 50%;
@@ -470,8 +469,9 @@ footer .redes li i {
   top: 100%;
 }
 .pageContainer .personWrapper #myimage1 {
-  background: transparent url('../img/team/alberto_gomez.jpg') center;
-  background-size: 180px;
+  background: transparent url('../img/team/alberto_gomez.jpg');
+  background-size: 250x;
+  background-position: center 330px;
 }
 .pageContainer .personWrapper #myimage2 {
   background: transparent url('../img/team/luis_martin.jpg') center;
@@ -482,7 +482,7 @@ footer .redes li i {
 }
 .pageContainer .personWrapper #myimage4 {
   background: transparent url('../img/team/jose_arias.jpg') center;
-  background-size: 180px;
+  background-size: 230px;
 }
 .pageContainer .personWrapper #myimage5 {
   background: transparent url('../img/team/victor_villena.jpg') center;
