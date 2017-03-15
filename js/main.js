@@ -7,8 +7,10 @@ $(document).ready(function(){
 
 
     var h = $('.formWrapper').innerHeight();
+	$('.column').css('height', h);
 
-    $('.column').css('height', h);
+	var altoWrapfooter = $('footer .navWrapper').innerHeight();
+	$("footer").css('padding-bottom',altoWrapfooter);
 
 });
 
@@ -18,4 +20,9 @@ $(window).resize( function(){
      $('.column').css('height', h);
 
 
+	var altoWrapfooter = $('footer .navWrapper').innerHeight();
+	$("footer").css('padding-bottom',altoWrapfooter);
+
+
 });
+
