@@ -483,7 +483,9 @@ footer .redes li i {
   background-position: center 330px;
 }
 .pageContainer .personWrapper #myimage4 {
-  background: transparent url('http://placehold.it/182');
+  background: transparent url('../img/team/alvaro_moron.jpg');
+  background-size: 250px;
+  background-position: -25px -10px;
 }
 .pageContainer .personWrapper #myimage5 {
   background: transparent url('../img/team/jose_arias.jpg') center;
